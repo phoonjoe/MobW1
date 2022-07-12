@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">My Application</string>
     <string name="helloText">Hello Class!</string>
-    <string name="numberText">123</string>
+    <string name="numberText">Roll Dice</string>
     <string name="rollButton">Roll Button</string>
+    <string name="rules">RULES\n\n123\n\n456\n\n7890</string>
+    <string name="playerName">Enter your name</string>
+    <string name="updateButton">Update</string>
 
 </resources>
