@@ -1,8 +1,10 @@
 package com.example.myapplication
 
+import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.view.inputmethod.InputMethodManager
 import android.widget.*
 import org.w3c.dom.Text
 
@@ -10,7 +12,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var diceImg:ImageView
     lateinit var numberText:TextView
     lateinit var nameText:TextView
-    lateinit var editNameText:TextView
+    lateinit var editNameText:EditText
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -28,6 +30,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun updateName(view : View){
         nameText.text=editNameText.text
+
+        editNameText.text.clear()
+        editNameText.clearFocus()
+
+        val imm=getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
+        imm.hideSoftInputFromWindow(view.windowToken,0)
     }
 
     private fun rollDice(){
