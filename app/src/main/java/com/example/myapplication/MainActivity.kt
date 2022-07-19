@@ -32,6 +32,7 @@ class MainActivity : AppCompatActivity() {
         nameText.text=editNameText.text
 
         editNameText.text.clear()
+
         editNameText.clearFocus()
 
         val imm=getSystemService(Context.INPUT_METHOD_SERVICE) as InputMethodManager
